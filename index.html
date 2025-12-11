@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en" class="h-full">
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SlideX — Professional Presentation Design Services</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root{
+      --bg-color-1: #f0f4ff;
+      --bg-color-2: #e0e7ff;
+      --surface: #ffffff;
+      --text: #0f172a;
+      --primary: #3b82f6;
+      --muted: rgba(15,23,42,0.65);
+    }
+    html,body{height:100%;margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;}
+    body{background:linear-gradient(135deg,var(--bg-color-1) 0%,var(--bg-color-2) 100%);color:var(--text);-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}
+    .container{max-width:1100px;margin:0 auto;padding:0 1rem;}
+    header{backdrop-filter:blur(6px);background:rgba(255,255,255,0.75);position:sticky;top:0;z-index:40;box-shadow:0 4px 12px rgba(2,6,23,0.06);}
+    .logo-row{display:flex;align-items:center;gap:12px;padding:0.75rem 0;}
+    #logo-svg rect{transition:fill .25s ease;}
+    .cta{background:var(--primary);color:white;padding:10px 18px;border-radius:10px;text-decoration:none;font-weight:600;box-shadow:0 6px 18px rgba(59,130,246,0.18);transition:transform .18s ease;}
+    .cta:active{transform:translateY(1px);}
+    /* Hero */
+    .hero{padding:64px 0 56px;text-align:center;}
+    .hero h1{font-size:clamp(28px,5vw,48px);line-height:1.02;margin-bottom:12px;font-weight:800;}
+    .hero p{font-size:clamp(15px,2.4vw,18px);color:var(--muted);max-width:900px;margin:0 auto 20px;}
+    .btn-cta{display:inline-block;padding:14px 26px;border-radius:12px;background:linear-gradient(90deg,var(--primary),#60a5fa);color:white;font-weight:700;box-shadow:0 10px 30px rgba(59,130,246,0.18);text-decoration:none;}
+    /* Cards */
+    .grid{display:grid;gap:18px;}
+    @media(min-width:768px){.grid{grid-template-columns:repeat(2,1fr);} }
+    @media(min-width:1024px){.grid{grid-template-columns:repeat(4,1fr);}}
+    .card{background:var(--surface);padding:18px;border-radius:14px;box-shadow:0 10px 30px rgba(2,6,23,0.06);transition:transform .28s cubic-bezier(.16,.8,.26,1),box-shadow .28s;}
+    .card:hover{transform:translateY(-8px);box-shadow:0 24px 46px rgba(2,6,23,0.12);}
+    .feature-icon{width:64px;height:64px;border-radius:12px;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;background:linear-gradient(180deg,rgba(99,102,241,0.08),rgba(96,165,250,0.06));font-size:28px;}
+    /* Pricing */
+    .pricing{display:inline-block;padding:26px;border-radius:18px;background:var(--surface);box-shadow:0 20px 50px rgba(2,6,23,0.06);text-align:center;}
+    .price-big{font-size:40px;font-weight:800;color:var(--primary);margin-bottom:6px;}
+    /* Contact */
+    .contact-card{background:var(--surface);padding:20px;border-radius:14px;box-shadow:0 10px 30px rgba(2,6,23,0.06);}
+    footer{padding:28px 0;color:var(--muted);text-align:center;}
+    /* subtle animation */
+    .fade-up{opacity:0;transform:translateY(10px);animation:fadeUp .7s ease forwards;}
+    @keyframes fadeUp{to{opacity:1;transform:none;}}
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <header id="header">
+    <div class="logo-row">
+     <svg id="logo-svg" width="52" height="52" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="4" y="4" width="40" height="40" rx="8" fill="#3b82f6"/>
+      <path d="M14 16 L20 16 C23 16 24 18 24 20 C24 22 23 24 20 24 L14 24" stroke="white" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+      <path d="M14 24 L20 24 C23 24 24 26 24 28 C24 30 23 32 20 32 L14 32" stroke="white" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+      <path d="M28 16 L34 32 M34 16 L28 32" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+     </svg>
+     <div style="flex:1;">
+      <div style="display:flex;align-items:center;justify-content:space-between;">
+       <div>
+        <div style="font-weight:800;font-size:18px;">SlideX</div>
+        <div style="font-size:13px;color:var(--muted);">Professional Slides. Powerful Results.</div>
+       </div>
+       <div style="margin-left:24px;">
+        <a class="cta" href="#contact">Get Started</a>
+       </div>
+      </div>
+     </div>
+    </div>
+   </header>
+
+   <main>
+    <section class="hero" id="hero">
+     <h1 class="fade-up">Present Like a Pro</h1>
+     <p class="fade-up" style="animation-delay:0.06s">High-quality, professionally designed slides for students, professionals, and businesses. Clean layouts, visual storytelling, and coaching to deliver your message with confidence.</p>
+     <a href="#services" class="btn-cta fade-up" style="animation-delay:0.12s">Explore Our Services</a>
+    </section>
+
+    <section id="services" style="padding:28px 0;">
+     <h2 style="text-align:center;font-size:26px;margin-bottom:8px;">What We Offer</h2>
+     <p style="text-align:center;color:var(--muted);margin-bottom:18px;">Comprehensive presentation solutions tailored to your needs</p>
+     <div class="grid" style="margin-bottom:18px;">
+      <div class="card">
+       <div class="feature-icon">🎨</div>
+       <h3 style="text-align:center;margin-bottom:8px;">Professional Design</h3>
+       <p style="text-align:center;color:var(--muted);">Clean, modern slides that capture attention and communicate effectively.</p>
+      </div>
+      <div class="card">
+       <div class="feature-icon">✏️</div>
+       <h3 style="text-align:center;margin-bottom:8px;">Content Enhancement</h3>
+       <p style="text-align:center;color:var(--muted);">Refine and improve your message for maximum impact.</p>
+      </div>
+      <div class="card">
+       <div class="feature-icon">📊</div>
+       <h3 style="text-align:center;margin-bottom:8px;">Visual Assets</h3>
+       <p style="text-align:center;color:var(--muted);">Custom icons, charts, and graphics that enhance your story.</p>
+      </div>
+      <div class="card">
+       <div class="feature-icon">🎤</div>
+       <h3 style="text-align:center;margin-bottom:8px;">Presentation Coaching</h3>
+       <p style="text-align:center;color:var(--muted);">Expert tips on how to deliver your presentation confidently.</p>
+      </div>
+     </div>
+    </section>
+
+    <section id="pricing" style="padding:18px 0;text-align:center;">
+     <h2 style="font-size:24px;margin-bottom:6px;">Simple, Transparent Pricing</h2>
+     <p style="color:var(--muted);margin-bottom:14px;">Quality presentations at affordable rates</p>
+     <div class="pricing">
+      <div class="price-big">₹50</div>
+      <div style="color:var(--muted);margin-bottom:12px;">per slide</div>
+      <div style="border-top:1px solid rgba(2,6,23,0.04);padding-top:12px;">
+       <p style="margin-bottom:8px;"><strong>Minimum Order:</strong> ₹200</p>
+       <ul style="list-style:none;padding:0;margin:0;color:var(--muted);text-align:left;">
+        <li>✓ Custom design for each slide</li>
+        <li>✓ Content improvement included</li>
+        <li>✓ Professional visuals & graphics</li>
+        <li>✓ Presentation tips provided</li>
+       </ul>
+      </div>
+     </div>
+    </section>
+
+    <section id="contact" style="padding:28px 0;">
+     <div style="max-width:720px;margin:0 auto;text-align:center;">
+      <h2 style="font-size:24px;margin-bottom:6px;">Ready to Get Started?</h2>
+      <p style="color:var(--muted);margin-bottom:14px;">Let's create an amazing presentation together</p>
+      <div class="contact-card">
+       <div style="display:flex;flex-direction:column;gap:12px;align-items:center;">
+        <div style="display:flex;align-items:center;gap:10px;">
+         <span style="font-size:20px;">📧</span>
+         <a id="email-link" href="mailto:aditya.m.shetty.goku@gmail.com" style="font-weight:700;color:var(--primary);text-decoration:none;">aditya.m.shetty.goku@gmail.com</a>
+        </div>
+        <div style="display:flex;align-items:center;gap:10px;">
+         <span style="font-size:20px;">🕒</span>
+         <div style="text-align:left;">
+          <div style="font-weight:700;">Availability</div>
+          <div style="color:var(--muted);">Sunday: All Day | Mon-Sat: 7:30 PM - 12:00 AM</div>
+         </div>
+        </div>
+        <p style="color:var(--muted);max-width:560px;margin-top:8px;">Send an email with your requirements. Once we agree on the details, I'll create your presentation. Thank you!</p>
+       </div>
+      </div>
+     </div>
+    </section>
+   </main>
+
+   <footer>
+    <div style="padding-top:10px;">© 2024 SlideX. Professional Slides. Powerful Results.</div>
+   </footer>
+  </div>
+
+  <script>
+    // small script to add simple entry animations and ensure icons background
+    document.querySelectorAll('.fade-up').forEach((el,i)=>{
+      el.style.animationDelay = (i*60) + 'ms';
+      el.classList.add('fade-up');
+    });
+    const icons = document.querySelectorAll('.feature-icon');
+    icons.forEach(ic => {
+      ic.style.background = 'linear-gradient(180deg, rgba(59,130,246,0.08), rgba(96,165,250,0.04))';
+    });
+  </script>
+ </body>
+</html>
